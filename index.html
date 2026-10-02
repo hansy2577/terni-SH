@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>terminal</title>
+</head>
+
+<body>
+   <h3 style="color: white">Terni-H os</h3>
+   <hr />
+   <br>
+   <iframe src="data/game.html" id="canvas" allowtransparency="false" frameborder="0" width="400" height="500" onscroll="false"></iframe><br>
+   <a style="color: white;">></a><input type="text" style="background-color: black; color: white; width: 200px; border: 0px solid black;" frameborder="0" id="input"><button onclick="ok()" style="border: 2px solid white; color: white; background-color: black;" >enter</button>
+
+
+   
+   <style> body { background-color: black; }</style>
+   <script>
+   document.getElementById("canvas").style.width = (window.innerWidth - 50)+"px"
+
+   document.getElementById("input").style.width = (window.innerWidth - 120)+"px"
+   sessionStorage.setItem("command","€"+"start");
+
+      function ok(){
+         sessionStorage.setItem("command","€"+document.getElementById("input").value);
+         document.getElementById("input").value = "";
+      }
+   </script>
+</body>
+
+</html>
