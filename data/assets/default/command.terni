@@ -1,0 +1,27 @@
+{ "scripts":"main.js" }
+
+>> this is a comment 
+
+[session]
+ changeSession(prompt("terminal file name"))
+
+[start]
+ exeCommande("h.help"); 
+
+[h.help]
+ echo("welcome to terni-H OS","white");
+
+[h.app.calc]
+calculator(prompt("value1"),prompt("type ?: 1 = +, 2 = -, 3 = ×, 4 = ÷"),prompt("value2"));
+
+[h.app.browser]
+makeBrowser(prompt("link"));
+
+[clear]
+ clearCanvas()
+ 
+[h.app]
+ echo("current app list :\n"+appList)
+
+[h.core]
+ echo("tern-H OS \n * version :"+terminal.version+"\n \n * application name :"+window.clientInformation.appName+"\n \n * application version :"+window.clientInformation.appVersion,"white");
